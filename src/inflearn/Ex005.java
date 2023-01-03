@@ -17,13 +17,17 @@ public class Ex005 {
 
         char[] ch = str.toCharArray();
         while (lt < rt) {
-            if (Character.isAlphabetic(ch[lt]) && Character.isAlphabetic(ch[rt])) {
+            if (!Character.isAlphabetic(ch[lt])) {
+                lt++;
+            } else if (!Character.isAlphabetic(ch[rt])) {
+                rt--;
+            } else {
                 char tmp = ch[lt];
                 ch[lt] = ch[rt];
                 ch[rt] = tmp;
+                lt++;
+                rt--;
             }
-            lt++;
-            rt--;
         }
 
         return String.valueOf(ch);
