@@ -9,6 +9,7 @@ public class Ex005 {
         String str = in.nextLine();
 
         System.out.println(solution(str));
+        System.out.println(solution2(str));
     }
 
     public static String solution(String str) {
@@ -31,6 +32,30 @@ public class Ex005 {
         }
 
         return String.valueOf(ch);
+    }
+
+    public static String solution2(String str) {
+        String answer;
+        char[] ch = str.toCharArray();
+        int lt = 0;
+        int rt = str.length() - 1;
+
+        while (lt < rt) {
+            if (!Character.isAlphabetic(ch[lt])) {
+                lt++;
+            } else if (!Character.isAlphabetic(ch[rt])) {
+                rt--;
+            } else {
+                char tmp = ch[lt];
+                ch[lt] = ch[rt];
+                ch[rt] = tmp;
+                lt++;
+                rt--;
+            }
+        }
+
+        answer = String.valueOf(ch);
+        return answer;
     }
 
 }
