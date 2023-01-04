@@ -12,9 +12,9 @@ public class Ex007 {
     }
 
     public static String solution(String str) {
-        String reversestr = new StringBuilder(str).reverse().toString();
+        String reverseStr = new StringBuilder(str).reverse().toString();
 
-        if (str.equalsIgnoreCase(reversestr)) {
+        if (str.equalsIgnoreCase(reverseStr)) {
             return "YES";
         } else {
             return "NO";
