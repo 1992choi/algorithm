@@ -1,6 +1,7 @@
 package inflearn;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -13,6 +14,7 @@ public class Ex010 {
         char targetChar = inputValue.split(" ")[1].charAt(0);
 
         System.out.println(solution(str, targetChar));
+        System.out.println(solution2(str, targetChar));
     }
 
     public static String solution(String str, char targetChar) {
@@ -38,6 +40,34 @@ public class Ex010 {
         }
 
         return answer.substring(0, answer.length() - 1);
+    }
+
+    public static String solution2(String str, char targetChar) {
+        char[] chars = str.toCharArray();
+        int[] answer = new int[str.length()];
+
+        int p = 100;
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i] == targetChar) {
+                p = 0;
+                answer[i] = p;
+            } else {
+                p++;
+                answer[i] = p;
+            }
+        }
+
+        p = 100;
+        for (int i = chars.length - 1; i >= 0; i--) {
+            if (chars[i] == targetChar) {
+                p = 0;
+            } else {
+                p++;
+                answer[i] = Math.min(answer[i], p);
+            }
+        }
+
+        return Arrays.toString(answer);
     }
 
 }
