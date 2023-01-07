@@ -6,8 +6,8 @@ public class Ex012 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int num = Integer.parseInt(in.nextLine());
-        String str = in.nextLine();
+        int num = in.nextInt();
+        String str = in.next();
 
         System.out.println(solution(num, str));
     }
