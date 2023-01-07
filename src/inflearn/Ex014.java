@@ -13,15 +13,29 @@ public class Ex014 {
         }
 
         System.out.println(solution(count, nums));
+        System.out.println(solution2(count, nums));
     }
 
     public static int solution(int count, int[] nums) {
         int answer = 0;
-        int min = 0;
+        int max = 0;
         for (int i = 0; i < count; i++) {
-            if (min < nums[i]) {
+            if (max < nums[i]) {
                 answer ++;
-                min = nums[i];
+                max = nums[i];
+            }
+        }
+
+        return answer;
+    }
+
+    public static int solution2(int count, int[] nums) {
+        int answer = 1;
+        int max = nums[0];
+        for (int i = 1; i < count; i++) {
+            if (nums[i] > max) {
+                answer ++;
+                max = nums[i];
             }
         }
 
