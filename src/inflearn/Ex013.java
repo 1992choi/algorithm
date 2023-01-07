@@ -13,6 +13,7 @@ public class Ex013 {
         }
 
         System.out.println(solution(count, nums));
+        System.out.println(solution2(count, nums));
     }
 
     public static String solution(int count, int[] nums) {
@@ -23,6 +24,17 @@ public class Ex013 {
                 continue;
             }
 
+            if (nums[i - 1] < nums[i]) {
+                answer += nums[i] + " ";
+            }
+        }
+
+        return answer;
+    }
+
+    public static String solution2(int count, int[] nums) {
+        String answer = nums[0] + " ";
+        for (int i = 1; i < count; i++) {
             if (nums[i - 1] < nums[i]) {
                 answer += nums[i] + " ";
             }
