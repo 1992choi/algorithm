@@ -15,11 +15,12 @@ public class Ex020 {
             nums[i] = in.nextInt();
         }
 
-        solution(count, nums);
+        // solution(count, nums);
+        solution2(count, nums);
     }
 
     public static void solution(int count, Integer[] nums) {
-        Integer[] ranks = new Integer[count];
+        Integer[] rank = new Integer[count];
         Integer[] sortedNums = Arrays.copyOf(nums, count);
         Arrays.sort(sortedNums, Collections.reverseOrder());
 
@@ -28,7 +29,7 @@ public class Ex020 {
         for (int i = 0; i < count; i++) {
             for (int j = 0; j < count; j++) {
                 if (sortedNums[i] == nums[j]) {
-                    ranks[j] = currentRank;
+                    rank[j] = currentRank;
                     cumulativeNum++;
 
                     /*
@@ -42,7 +43,24 @@ public class Ex020 {
         }
 
         for (int i = 0; i < count; i++) {
-            System.out.print(ranks[i] + " ");
+            System.out.print(rank[i] + " ");
+        }
+    }
+
+    public static void solution2(int count, Integer[] nums) {
+        int[] rank = new int[count];
+        for (int i = 0; i < count; i++) {
+            int cnt = 1;
+            for (int j = 0; j < count; j++) {
+                if (nums[i] < nums[j]) {
+                    cnt++;
+                }
+            }
+            rank[i] = cnt;
+        }
+
+        for (int i = 0; i < count; i++) {
+            System.out.print(rank[i] + " ");
         }
     }
 
