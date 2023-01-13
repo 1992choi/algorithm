@@ -2,7 +2,7 @@ package inflearn;
 
 import java.util.Scanner;
 
-public class Ex019 {
+public class Ex02_07 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -14,7 +14,6 @@ public class Ex019 {
         }
 
         System.out.println(solution(count, nums));
-        System.out.println(solution2(count, nums));
     }
 
     public static int solution(int count, int[] nums) {
@@ -27,22 +26,6 @@ public class Ex019 {
                 cumulativeScore ++;
             } else {
                 cumulativeScore = 1;
-            }
-        }
-
-        return answer;
-    }
-
-    public static int solution2(int count, int[] nums) {
-        int answer = 0;
-
-        int cumulativeScore = 0;
-        for (int i = 0; i < count; i++) {
-            if (nums[i] == 1) {
-                cumulativeScore++;
-                answer += cumulativeScore;
-            } else {
-                cumulativeScore = 0;
             }
         }
 
