@@ -2,22 +2,17 @@ package inflearn;
 
 import java.util.Scanner;
 
-public class Ex009 {
+public class Ex01_09_Answer {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String str = in.nextLine();
 
-        System.out.println(solution(str));
+        System.out.println(solution1(str));
         System.out.println(solution2(str));
-        System.out.println(solution3(str));
     }
 
-    public static int solution(String str) {
-        return Integer.parseInt(str.replaceAll("[^0-9]",""));
-    }
-
-    public static int solution2(String str) {
+    public static int solution1(String str) {
         int answer = 0;
         for (char x : str.toCharArray()) {
             if (x >= 48 && x <= 57) {
@@ -28,7 +23,7 @@ public class Ex009 {
         return answer;
     }
 
-    public static int solution3(String str) {
+    public static int solution2(String str) {
         String answer = "";
         for (char x : str.toCharArray()) {
             if (Character.isDigit(x)) {
