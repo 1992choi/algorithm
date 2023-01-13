@@ -2,7 +2,7 @@ package inflearn;
 
 import java.util.Scanner;
 
-public class Ex015 {
+public class Ex02_03 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -17,7 +17,6 @@ public class Ex015 {
         }
 
         solution(count, arrA, arrB);
-        solution2(count, arrA, arrB);
     }
 
     public static void solution(int count, int[] arrA, int[] arrB) {
@@ -26,22 +25,6 @@ public class Ex015 {
             if (result == 0) {
                 System.out.println("D");
             } else if (result == 1 || result == -2) {
-                System.out.println("A");
-            } else {
-                System.out.println("B");
-            }
-        }
-    }
-
-    public static void solution2(int count, int[] arrA, int[] arrB) {
-        for (int i = 0; i < count; i++) {
-            if (arrA[i] == arrB[i]) {
-                System.out.println("D");
-            } else if (arrA[i] == 1 && arrB[i] == 3) {
-                System.out.println("A");
-            } else if (arrA[i] == 2 && arrB[i] == 1) {
-                System.out.println("A");
-            } else if (arrA[i] == 3 && arrB[i] == 2) {
                 System.out.println("A");
             } else {
                 System.out.println("B");
