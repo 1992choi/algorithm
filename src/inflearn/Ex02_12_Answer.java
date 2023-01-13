@@ -1,10 +1,8 @@
 package inflearn;
 
-import java.util.HashSet;
 import java.util.Scanner;
-import java.util.Set;
 
-public class Ex024 {
+public class Ex02_12_Answer {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -18,36 +16,9 @@ public class Ex024 {
         }
 
         System.out.println(solution(studentCnt, testCnt, arr));
-        System.out.println(solution2(studentCnt, testCnt, arr));
     }
 
-    public static int solution(int studentCnt, int testCnt, int[][] arr) {
-        Set<String> compare = new HashSet<>();
-
-        for (int i = 0; i < testCnt; i++) {
-            for (int j = 0; j < studentCnt; j++) {
-                for (int k = 0; k < studentCnt; k++) {
-                    if (j < k) {
-                        compare.add(arr[i][j] + ":" + arr[i][k]);
-                    }
-                }
-            }
-        }
-
-        for (int i = 0; i < testCnt; i++) {
-            for (int j = 0; j < studentCnt; j++) {
-                for (int k = 0; k < studentCnt; k++) {
-                    if (j > k) {
-                        compare.remove(arr[i][j] + ":" + arr[i][k]);
-                    }
-                }
-            }
-        }
-
-        return compare.size();
-    }
-
-    public static int solution2(int n, int m, int[][] arr) {
+    public static int solution(int n, int m, int[][] arr) {
         int answer = 0;
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
