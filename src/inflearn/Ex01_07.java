@@ -2,14 +2,13 @@ package inflearn;
 
 import java.util.Scanner;
 
-public class Ex007 {
+public class Ex01_07 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String str = in.nextLine();
 
         System.out.println(solution(str));
-        System.out.println(solution2(str));
     }
 
     public static String solution(String str) {
@@ -20,18 +19,6 @@ public class Ex007 {
         } else {
             return "NO";
         }
-    }
-
-    public static String solution2(String str) {
-        str = str.toUpperCase();
-        int len = str.length();
-        for (int i = 0 ; i < len / 2; i++) {
-            if (str.charAt(i) != str.charAt(len - 1 - i)) {
-                return "NO";
-            }
-        }
-
-        return "YES";
     }
 
 }
