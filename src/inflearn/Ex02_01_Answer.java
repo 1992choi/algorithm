@@ -2,7 +2,7 @@ package inflearn;
 
 import java.util.Scanner;
 
-public class Ex013 {
+public class Ex02_01_Answer {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -13,26 +13,9 @@ public class Ex013 {
         }
 
         System.out.println(solution(count, nums));
-        System.out.println(solution2(count, nums));
     }
 
     public static String solution(int count, int[] nums) {
-        String answer = "";
-        for (int i = 0; i < count; i++) {
-            if (i == 0) {
-                answer += nums[0] + " ";
-                continue;
-            }
-
-            if (nums[i - 1] < nums[i]) {
-                answer += nums[i] + " ";
-            }
-        }
-
-        return answer;
-    }
-
-    public static String solution2(int count, int[] nums) {
         String answer = nums[0] + " ";
         for (int i = 1; i < count; i++) {
             if (nums[i - 1] < nums[i]) {
