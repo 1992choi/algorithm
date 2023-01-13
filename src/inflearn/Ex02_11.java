@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Ex023 {
+public class Ex02_11 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

@@ -2,7 +2,7 @@ package inflearn;
 
 import java.util.Scanner;
 
-public class Ex023_2 {
+public class Ex02_11_Answer {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
