@@ -14,6 +14,7 @@ public class Ex03_03 {
         }
 
         System.out.println(solution(day, targetDay, arr));
+        System.out.println(solution2(day, targetDay, arr));
     }
 
     public static int solution(int day, int targetDay, int[] arr) {
@@ -27,6 +28,25 @@ public class Ex03_03 {
 
             if (answer < sum) {
                 answer = sum;
+            }
+        }
+
+        return answer; // 시간초과 발생
+    }
+
+    public static int solution2(int day, int targetDay, int[] arr) {
+        int[] sumArr = new int[day];
+
+        int sum = 0;
+        for (int i = 0; i < day; i++) {
+            sum += arr[i];
+            sumArr[i] = sum;
+        }
+
+        int answer = sumArr[targetDay - 1];
+        for (int i = targetDay; i < day; i++) {
+            if (answer < sumArr[i] - sumArr[i - targetDay]) {
+                answer = sumArr[i] - sumArr[i - targetDay];
             }
         }
 
