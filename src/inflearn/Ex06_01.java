@@ -17,13 +17,18 @@ public class Ex06_01 {
 
     public static void solution(int n, int[] arr) {
         for (int i = 0; i < n - 1; i++) {
+            int idx = 0;
+            int min = Integer.MAX_VALUE;
             for (int j = i + 1; j < n; j++) {
-                if (arr[j] < arr[i]) {
-                    int tmp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = tmp;
+                if (arr[j] < min) {
+                    min = arr[j];
+                    idx = j;
                 }
             }
+
+            int tmp = arr[i];
+            arr[i] = arr[idx];
+            arr[idx] = tmp;
         }
 
         // print
