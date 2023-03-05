@@ -46,14 +46,14 @@ public class Ex05_08_Answer {
         return answer;
     }
 
-}
+    static class Person {
+        int id;
+        int priority;
 
-class Person {
-    int id;
-    int priority;
-
-    public Person(int id, int priority) {
-        this.id = id;
-        this.priority = priority;
+        public Person(int id, int priority) {
+            this.id = id;
+            this.priority = priority;
+        }
     }
+
 }
