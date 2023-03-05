@@ -25,31 +25,31 @@ public class Ex06_07_Answer {
         }
     }
 
-}
+    static class Point implements Comparable<Point> {
+        int x;
+        int y;
 
-class Point implements Comparable<Point> {
-    int x;
-    int y;
+        public Point(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
 
-    public Point(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
+        public int getX() {
+            return x;
+        }
 
-    public int getX() {
-        return x;
-    }
+        public int getY() {
+            return y;
+        }
 
-    public int getY() {
-        return y;
-    }
-
-    @Override
-    public int compareTo(Point o) {
-        if(this.x == o.x) {
-            return this.y - o.y;
-        } else {
-            return this.x - o.x;
+        @Override
+        public int compareTo(Point o) {
+            if(this.x == o.x) {
+                return this.y - o.y;
+            } else {
+                return this.x - o.x;
+            }
         }
     }
+
 }

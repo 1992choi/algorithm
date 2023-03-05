@@ -34,31 +34,31 @@ public class Ex06_07 {
         }
     }
 
-}
+    static class Coordinate implements Comparable<Coordinate> {
+        int x;
+        int y;
 
-class Coordinate implements Comparable<Coordinate> {
-    int x;
-    int y;
+        public Coordinate(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
 
-    public Coordinate(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
+        public int getX() {
+            return x;
+        }
 
-    public int getX() {
-        return x;
-    }
+        public int getY() {
+            return y;
+        }
 
-    public int getY() {
-        return y;
-    }
-
-    @Override
-    public int compareTo(Coordinate o) {
-        if (o.getX() != getX()) {
-            return getX() - o.getX();
-        } else {
-            return getY() - o.getY();
+        @Override
+        public int compareTo(Coordinate o) {
+            if (o.getX() != getX()) {
+                return getX() - o.getX();
+            } else {
+                return getY() - o.getY();
+            }
         }
     }
+
 }
