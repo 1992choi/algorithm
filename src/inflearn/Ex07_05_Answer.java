@@ -35,18 +35,19 @@ public class Ex07_05_Answer {
         }
     }
 
-}
+    static class Node {
 
-class Node {
+        int data;
+        Node lt;
+        Node rt;
 
-    int data;
-    Node lt;
-    Node rt;
+        public Node(int val) {
+            data = val;
+            lt = null;
+            rt = null;
+        }
 
-    public Node(int val) {
-        data = val;
-        lt = null;
-        rt = null;
     }
 
 }
+
