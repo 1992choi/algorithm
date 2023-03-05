@@ -3,23 +3,6 @@ package inflearn;
 public class Ex07_09_Answer {
 
     public static void main(String[] args) {
-        /*
-            Ex07_05_Answer.java 파일에 선언되어 있음
-
-            class Node {
-
-                int data;
-                Node lt;
-                Node rt;
-
-                public Node(int val) {
-                    data = val;
-                    lt = null;
-                    rt = null;
-                }
-
-            }
-         */
         Node root = new Node(1);
         root.lt = new Node(2);
         root.rt = new Node(3);
@@ -42,6 +25,20 @@ public class Ex07_09_Answer {
         } else {
             return Math.min(DFS(level + 1, root.lt), DFS(level + 1, root.rt));
         }
+    }
+
+    static class Node {
+
+        int data;
+        Node lt;
+        Node rt;
+
+        public Node(int val) {
+            data = val;
+            lt = null;
+            rt = null;
+        }
+
     }
 
 }
