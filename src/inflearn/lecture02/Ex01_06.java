@@ -128,11 +128,7 @@ public class Ex01_06 {
     }
 
     public static boolean isExistDup(int[] fruit) {
-        Set<Integer> set = new HashSet<>();
-        for (int count : fruit) {
-            set.add(count);
-        }
-
+        Set<Integer> set = new HashSet<>(Arrays.asList(Arrays.stream(fruit).boxed().toArray(Integer[]::new)));
         return set.size() != fruit.length;
     }
 
