@@ -1,6 +1,8 @@
 package inflearn.lecture02;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Ex01_06 {
 
@@ -28,7 +30,7 @@ public class Ex01_06 {
                 )
         ); // 24
 
-        // CASE 3. todo. 해당 케이스 오답 나오므로 다시 풀어볼 것.
+        // CASE 3.
         System.out.println(
                 solution(
                         new int[][]{
@@ -61,11 +63,15 @@ public class Ex01_06 {
     }
 
     public static int solution(int[][] fruit) {
-        System.out.println("\n\n\n");
         int answer = 0;
         int[] changeStatusArr = new int[fruit.length]; // 교환한 학생인지 체크하는 플래그(0=교환안함, 1=교환함)
 
         for (int i = 0; i < fruit.length; i++) {
+            // 가장 작은 바구니가 오직 1개인지 확인
+            if (isExistDup(fruit[i])) {
+                continue;
+            }
+
             // 가장 적은 과일 바구니 찾기
             int minIdx = 0; // 기준이 되는 학생이 가지고 있는 바구니 중 작은 바구니의 idx(0=사과 / 1=배 / 2=귤)
             int minValue = Integer.MAX_VALUE; // 가장 적게 들은 바구니에 들어있는 과일의 갯수
@@ -78,8 +84,13 @@ public class Ex01_06 {
 
             // 다른 학생과 비교
             for (int j = 0; j < fruit.length; j++) {
-                // 자기 자신과의 비교 또는 이미 교환한 학생은 제외
+                // 자기 자신과의 비교는 제외
                 if (i == j) {
+                    continue;
+                }
+
+                // 가장 작은 바구니가 오직 1개인지 확인
+                if (isExistDup(fruit[j])) {
                     continue;
                 }
 
@@ -94,8 +105,8 @@ public class Ex01_06 {
                 }
 
                 // 교환
-                if (fruit[i][minIdx] < fruit[j][minIdx] &&
-                        fruit[j][minIdx2] < fruit[i][minIdx2] &&
+                if (fruit[i][minIdx] + 1 <= fruit[j][minIdx] - 1 &&
+                        fruit[j][minIdx2] + 1 <= fruit[i][minIdx2] - 1 &&
                         changeStatusArr[i] == 0 && changeStatusArr[j] == 0) {
                     fruit[i][minIdx]++;
                     fruit[i][minIdx2]--;
@@ -105,7 +116,7 @@ public class Ex01_06 {
                     changeStatusArr[j] = 1;
                 }
 
-                System.out.println(Arrays.deepToString(fruit));
+                // System.out.println(Arrays.deepToString(fruit));
             }
         }
 
@@ -114,6 +125,15 @@ public class Ex01_06 {
         }
 
         return answer;
+    }
+
+    public static boolean isExistDup(int[] fruit) {
+        Set<Integer> set = new HashSet<>();
+        for (int count : fruit) {
+            set.add(count);
+        }
+
+        return set.size() != fruit.length;
     }
 
 }
