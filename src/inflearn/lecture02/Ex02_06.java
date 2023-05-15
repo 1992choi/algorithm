@@ -18,12 +18,19 @@ public class Ex02_06 {
         List<String> answer = new ArrayList<>();
 
         // 입장 순서대로 정렬
-        Arrays.sort(reports, new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o1.split(" ")[1].compareTo(o2.split(" ")[1]);
-            }
-        });
+//        Arrays.sort(reports, x -> new Comparator<String>() {
+//            @Override
+//            public int compare(String o1, String o2) {
+//                return o1.split(" ")[1].compareTo(o2.split(" ")[1]);
+//            }
+//        });
+
+        // 입장 순서대로 정렬 - 람다 사용하여 간소화 #1
+        // Arrays.sort(reports, (o1, o2) -> o1.split(" ")[1].compareTo(o2.split(" ")[1]));
+
+        // 입장 순서대로 정렬 - 람다 사용하여 간소화 #2
+        Arrays.sort(reports, Comparator.comparing(o -> o.split(" ")[1]));
+
 
         // 문서가 사라진 시간에 방문자 추출
         for (String report : reports) {
