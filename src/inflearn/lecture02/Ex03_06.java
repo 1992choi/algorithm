@@ -36,7 +36,7 @@ public class Ex03_06 {
         // 시작 시간을 첫 회의가 시작하는 시점으로 설정
         time = meetings[0][0];
 
-        while (time < 50) {
+        while (time < 500_000) {
             //System.out.println("time=" + time);
             //System.out.println("meetingsIdx=" + meetingsIdx);
             if (meetingsIdx == meetings.length) {
