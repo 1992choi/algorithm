@@ -5,9 +5,9 @@ import java.util.Arrays;
 public class Ex04_01 {
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(solution(new int[]{5, 6, 7, 8, 9})));
-        System.out.println(Arrays.toString(solution(new int[]{5, 4, 3, 2, 1})));
-        System.out.println(Arrays.toString(solution(new int[]{12, 5, 7, 23, 45, 21, 17})));
+        System.out.println(Arrays.toString(solution(new int[]{5, 6, 7, 8, 9}))); // [8, 5, 6, 9, 7]
+        System.out.println(Arrays.toString(solution(new int[]{5, 4, 3, 2, 1}))); // [1, 2, 4, 3, 5]
+        System.out.println(Arrays.toString(solution(new int[]{12, 5, 7, 23, 45, 21, 17}))); // [5, 12, 17, 7, 21, 23, 45]
     }
 
     public static int[] solution(int[] nums) {
