@@ -2,7 +2,6 @@ package programmers.lv1;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.stream.IntStream;
 
 /*
     프로그래머스 Lv1. 약수의 합
@@ -33,7 +32,7 @@ public class Ex12928 {
             }
         }
 
-        return set.stream().flatMapToInt(IntStream::of).sum();
+        return set.stream().mapToInt(i -> i).sum();
     }
 
 }
