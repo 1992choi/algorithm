@@ -5,6 +5,17 @@ import java.util.List;
 
 public class Ex06_02 {
 
+    public static void main(String[] args) {
+        /**
+         *  문제해법 보고 푼 문제.
+         */
+        System.out.println(solution(new int[][]{{1, 3}, {5, 7}, {4, 2}})); // 1968
+        System.out.println(solution(new int[][]{{3, 2}, {3, 5}, {5, 2}, {7, 3}})); // 864
+        System.out.println(solution(new int[][]{{1, 2}, {1, 5}, {1, 7}, {1, 3}})); // 720
+        System.out.println(solution(new int[][]{{1, 7}})); // 3600
+        System.out.println(solution(new int[][]{{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}})); // 646
+    }
+
     static int answer;
     static int[][] relation;
     static List<Integer> list = new ArrayList<>();
@@ -48,14 +59,6 @@ public class Ex06_02 {
                 }
             }
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.println(solution(new int[][]{{1, 3}, {5, 7}, {4, 2}})); // 1968
-        System.out.println(solution(new int[][]{{3, 2}, {3, 5}, {5, 2}, {7, 3}})); // 864
-        System.out.println(solution(new int[][]{{1, 2}, {1, 5}, {1, 7}, {1, 3}})); // 720
-        System.out.println(solution(new int[][]{{1, 7}})); // 3600
-        System.out.println(solution(new int[][]{{1, 2}, {2, 3}, {3, 4}, {4, 5}, {5, 6}, {6, 7}})); // 646
     }
 
 }
