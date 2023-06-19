@@ -6,7 +6,12 @@ import java.util.Queue;
 public class Ex07_03 {
 
     public static void main(String[] args) {
-        // TODO: 2023/06/19. 1번 케이스 오답.
+        /*
+            TODO: 2023/06/19. 1번 케이스 오답.
+                - 만약 2레벨 때, *2를 했을 때 8을 체크해버리면
+                      4레벨 때, *2를 했을 때 8은 체크가 되어있기 때문에 뻣어나갈 수가 없음. (답이 이런 케이스일 때의 하위 노드에 있어서 정확한 답을 도출하지 못함)
+                  레벨까지 ch배열이 넣기 위하여 배열을 확장시키거나 Set<Integer[]> 형태로 변경해봤지만 1번 케이스는 통과하지만 레벨이 높은 테스트케이스가 실패함.
+         */
         System.out.println(solution(1, 11)); // 6
         System.out.println(solution(10, 3)); // 3
         System.out.println(solution(1, 34567)); // 19
