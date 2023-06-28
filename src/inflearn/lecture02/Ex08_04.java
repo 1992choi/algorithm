@@ -8,6 +8,9 @@ import java.util.Queue;
 public class Ex08_04 {
 
     public static void main(String[] args) {
+        /**
+         *  문제해법 보고 푼 문제.
+         */
         System.out.println(solution(new int[][]{{3, 1, 3}, {1, 4, 2}, {4, 2, 3}})); // 1
         System.out.println(solution(new int[][]{{3, 2, 1, 3}, {1, 1, 4, 2}, {3, 4, 2, 1}, {1, 2, 2, 4}})); // 2
         System.out.println(solution(new int[][]{{3, 2, 1, 3, 1, 2}, {2, 1, 1, 1, 4, 2}, {2, 2, 2, 1, 2, 2}, {1, 3, 3, 4, 4, 4}, {1, 2, 2, 3, 3, 4}})); // 5
