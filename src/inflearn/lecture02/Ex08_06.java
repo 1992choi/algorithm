@@ -46,12 +46,16 @@ public class Ex08_06 {
             // 큐에서 뺀 값 정답에 넣기
             answer[idx++] = subjects[pollNum];
 
-            // 큐에서 뺀 값과 관련된 진입차수 -1 처리
+            // 큐에서 뺀 값이 특정 과목의 선수과목인지 판단
             for (String c : course) {
+                // 큐에서 뺀 값이 선수과목이라면 특정 과목의 진입차수를 -1 처리
                 if (c.split(" ")[1].equals(subjects[pollNum])) {
-                    indegree[subjectMap.get(c.split(" ")[0])]--;
-                    if (indegree[subjectMap.get(c.split(" ")[0])] == 0) {
-                        queue.add(subjectMap.get(c.split(" ")[0]));
+                    int subjectNum = subjectMap.get(c.split(" ")[0]);
+                    indegree[subjectNum]--;
+
+                    // 진입차수가 0이 되었으면 큐에 넣기
+                    if (indegree[subjectNum] == 0) {
+                        queue.add(subjectNum);
                     }
                 }
             }
