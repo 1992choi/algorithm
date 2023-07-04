@@ -3,6 +3,9 @@ package inflearn.lecture02;
 public class Ex09_01 {
 
     public static void main(String[] args) {
+        /**
+         *  문제해법 보고 푼 문제.
+         */
         System.out.println(solution(2, 8.00, new String[]{"700 7.00", "199 2.00"})); // 796
         System.out.println(solution(3, 8.00, new String[]{"700 7.00", "299 3.00", "499 5.00"})); // 798
     }
