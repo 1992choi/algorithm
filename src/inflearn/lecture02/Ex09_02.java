@@ -3,6 +3,9 @@ package inflearn.lecture02;
 public class Ex09_02 {
 
     public static void main(String[] args) {
+        /**
+         *  문제해법 보고 푼 문제.
+         */
         System.out.println(solution(7, new int[][]{{4, 5}, {3, 6}, {2, 7}, {1, 4}, {6, 7}, {1, 5}})); // 5
     }
 
