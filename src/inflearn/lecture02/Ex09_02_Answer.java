@@ -1,6 +1,5 @@
 package inflearn.lecture02;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ex09_02_Answer {

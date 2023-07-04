@@ -32,8 +32,10 @@ public class Ex09_02 {
                 if (dy[j - length] == 0 && length != j) {
                     continue;
                 }
+
                 // 값이 0일때는 자신의 용량인 capacity를 할당하고 그렇지 않은 경우에는 이전 파이프의 용량과 내 용량 중 적은 값을 할당한다.
-                dy[j] = dy[j - length] == 0 ? capacity : Math.min(dy[j - length], capacity);
+                // dy[j] = dy[j - length] == 0 ? capacity : Math.min(dy[j - length], capacity); // 정답은 맞았지만 dy 값의 변화가 해답과 달라 확인해보니 잘못된 로직이어서 아래처럼 수정
+                dy[j] = length == j ? Math.max(dy[length], capacity) : Math.max(dy[j], Math.min(dy[j - length], capacity));
             }
         }
 
