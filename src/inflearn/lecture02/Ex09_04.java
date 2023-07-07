@@ -8,7 +8,8 @@ public class Ex09_04 {
         /**
          *  문제해법 보고 푼 문제.
          */
-        System.out.println(solution(new int[]{1, 4, 3, 5, 7})); //
+        System.out.println(solution(new int[]{1, 4, 3, 5, 7})); // 4
+        System.out.println(solution(new int[]{3, 3, 3, 3, 3})); // 5
     }
 
     public static int solution(int[] param) {
@@ -40,7 +41,13 @@ public class Ex09_04 {
                     for (int k = 1; k < i; k++) {
                         if (nums[k] == nums[i] - diff) {
                             findIdx = k;
-                            break;
+                            // break;
+                            /* break; 주석이유
+                                : 3, 3, 3, 3(i), 3(j) 일 경우, break;를 하면 index가 0인 3에서 멈춰서 오답이 나옴.
+                                  따라서 break;를 제거하거나 역순으로 탐색.
+                                  역순으로 탐색하며 break;를 거는 방법이 조금 더 효율적인 측면에서 좋을 것 같음
+                                  => for (k = i - 1; k >= 1; k--)
+                             */
                         }
                     }
 
