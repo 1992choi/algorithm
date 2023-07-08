@@ -3,8 +3,7 @@ package inflearn.lecture02;
 public class Ex09_03_Answer {
 
     public static void main(String[] args) {
-        // 해설코드인데 오류 발생...
-        System.out.println(solution(6, new int[]{10, 20, 15, 25, 10, 20})); // 75
+        System.out.println(solution(6, new int[]{0, 10, 20, 15, 25, 10, 20})); // 75
     }
 
     public static int solution(int n, int[] score) {
