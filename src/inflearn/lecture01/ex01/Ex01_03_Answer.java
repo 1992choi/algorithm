@@ -25,6 +25,7 @@ public class Ex01_03_Answer {
             str = str.substring(pos + 1);
         }
 
+        // 마지막 단어에 대한 처리
         if (str.length() > max) {
             answer = str;
         }
