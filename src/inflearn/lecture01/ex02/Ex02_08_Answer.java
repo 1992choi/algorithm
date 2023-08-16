@@ -7,7 +7,7 @@ public class Ex02_08_Answer {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int count = in.nextInt();
-        Integer[] nums = new Integer[count];
+        int[] nums = new int[count];
 
         for (int i = 0; i < count; i++) {
             nums[i] = in.nextInt();
@@ -16,7 +16,7 @@ public class Ex02_08_Answer {
         solution(count, nums);
     }
 
-    public static void solution(int count, Integer[] nums) {
+    public static void solution(int count, int[] nums) {
         int[] rank = new int[count];
         for (int i = 0; i < count; i++) {
             int cnt = 1;
