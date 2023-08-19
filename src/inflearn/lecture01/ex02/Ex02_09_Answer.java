@@ -37,8 +37,8 @@ public class Ex02_09_Answer {
         }
 
         // 대각선 판단
-        sum1 = 0; // 행의 합
-        sum2 = 0; // 열의 합
+        sum1 = 0;
+        sum2 = 0;
         for (int i = 0; i < count; i++) {
             sum1 += arr[i][i];
             sum2 += arr[i][count - i - 1];
