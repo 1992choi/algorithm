@@ -23,10 +23,10 @@ public class Ex05_06_Answer {
         }
 
         while (!queue.isEmpty()) {
-            for (int i = 1; i < k; i++) {
+            for (int i = 1; i < k; i++) { // k 직전까지 꺼내서 다시 넣는 작업
                 queue.offer(queue.poll());
             }
-            queue.poll();
+            queue.poll(); // k를 외친 왕자는 제외
             if (queue.size() == 1) {
                 answer = queue.poll();
             }
