@@ -21,6 +21,16 @@ public class Ex05_07_Answer {
         }
 
         for (char x : plan.toCharArray()) {
+            /*
+                판단하려는 과목이 필수과목에는 존재하지만 현재 큐의 첫 번째가 아니라면, 이미 순서를 어긴 케이스이므로 "NO"로 리턴
+                Ex) C B A (필수과목)
+                    C D K A E 가 주어졌을 때,
+                    A를 판단할 차례이면,
+
+                    B A (필수과목)
+                    A E 상태이다.
+                    A는 필수과목이지만 B 뒤에 존재(=큐의 첫번째가 아닌 경우)하므로, 순서가 이미 깨진 상황이다.
+             */
             if (queue.contains(x)) {
                 if (x != queue.poll()) {
                     return "NO";
