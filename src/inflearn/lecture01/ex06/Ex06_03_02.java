@@ -2,7 +2,7 @@ package inflearn.lecture01.ex06;
 
 import java.util.Scanner;
 
-public class Ex06_03_Answer {
+public class Ex06_03_02 {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -16,19 +16,18 @@ public class Ex06_03_Answer {
     }
 
     public static void solution(int n, int[] arr) {
-        for (int i = 1; i < n; i++) {
-            int tmp = arr[i];
-            int j;
+        for (int i = 1; i < arr.length; i++) {
+            int tmp = arr[i]; // i를 기준 값으로 놓기
+            int idx = i; // i가 위치할 인덱스
 
-            for (j = i - 1; j >= 0; j--) {
-                if (arr[j] > tmp) {
+            for (int j = i - 1; j >= 0; j--) {
+                if (arr[j] > tmp) { // 기준값(=i) 보다 큰 경우, 뒤로 한 칸씩 밀기
                     arr[j + 1] = arr[j];
-                } else {
-                    break;
+                    idx--;
                 }
             }
 
-            arr[j + 1] = tmp; // j 포문이 멈춘 다음 칸에 기준값(=arr[i]) 삽입
+            arr[idx] = tmp; // 한 칸씩 밀고 남은 칸에 i 넣기
         }
 
         // print
