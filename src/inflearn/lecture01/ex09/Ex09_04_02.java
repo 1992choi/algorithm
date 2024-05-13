@@ -2,6 +2,9 @@ package inflearn.lecture01.ex09;
 
 import java.util.*;
 
+/**
+ *  문제해법 보고 푼 문제.
+ */
 public class Ex09_04_02 {
 
     public static void main(String[] args) {
