@@ -8,7 +8,6 @@ public class Ex12911 {
         System.out.println(solution(15)); // 23
     }
 
-    // 효율성 테스트 실패
     public static int solution(int n) {
         int curOne = toBinary(n);
 
