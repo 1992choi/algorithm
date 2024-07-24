@@ -1,45 +1,33 @@
 package programmers.lv2;
 
-// 프로그래머스 Lv2. 점프와 순간 이동 - https://school.programmers.co.kr/learn/courses/30/lessons/12980
-// 부분통과 - 효율성 테스트 실패
+import java.util.Arrays;
+
+// 프로그래머스 Lv2. 카펫 - https://school.programmers.co.kr/learn/courses/30/lessons/42842
 public class Ex42842 {
 
     public static void main(String[] args) {
-        System.out.println(solution(5)); // 2
-        System.out.println(solution(6)); // 2
-        System.out.println(solution(5000)); // 5
+        System.out.println(Arrays.toString(solution(10, 2))); // [4,3]
+        System.out.println(Arrays.toString(solution(8, 1))); // [3,3]
+        System.out.println(Arrays.toString(solution(24, 24))); // [8,6]
+        System.out.println(Arrays.toString(solution(18, 6))); // [8,3]
     }
 
-    static long answer;
-
-    public static long solution(long n) {
-        answer = Long.MAX_VALUE;
-
-        // 처음은 무조건 점프
-        long location = 1;
-        long cost = 1;
-
-        // 2번째 이후 움직임
-        dfs(location, n, cost);
-
-        return answer;
-    }
-
-    public static void dfs(long location, long n, long cost) {
-        if (location > n || cost > answer) {
-            return;
+    public static int[] solution(int brown, int yellow) {
+        int width = 1;
+        int height = 1;
+        for (width = 1; width <= brown; width++) {
+            for (height = 1; height <= width; height++) { // 가로 길이는 세로 길이와 같거나, 세로 길이보다 길다는 조건
+                // 노랑 : (가로-2) * (세로-2)
+                // 갈색 : 가로 * 세로 - 노랑
+                int yellowCount = (width - 2) * (height - 2);
+                int brownCount = width * height - yellowCount;
+                if (yellow == yellowCount && brown == brownCount) {
+                    return new int[]{width, height};
+                }
+            }
         }
 
-        if (location == n) {
-            answer = cost;
-        } else {
-            // 순간이동 (현재에서 x2로 점프)
-            dfs(location * 2, n, cost);
-
-            // 점프 (1칸 앞으로 점프)
-            dfs(location + 1, n, cost + 1);
-        }
+        return new int[]{width, height};
     }
 
 }
-
