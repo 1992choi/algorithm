@@ -9,9 +9,9 @@ public class Ex12980 {
     static int[] memoization;
 
     public static void main(String[] args) {
-        System.out.println(solution(5)); // 2
-        System.out.println(solution(6)); // 2
-        System.out.println(solution(5000)); // 5
+        System.out.println(solution2(5)); // 2
+        System.out.println(solution2(6)); // 2
+        System.out.println(solution2(5000)); // 5
     }
 
     // 정확성 테스트 모두 통과 && 효율성 통과 못함
@@ -55,6 +55,23 @@ public class Ex12980 {
                 dfs(location + 1, n, cost + 1);
             }
         }
+    }
+
+    // 풀이법 참고
+    public static int solution2(int n) {
+        int ans = 0;
+
+        // 2로 나누었을 때, 나머지가 있으면 1칸이동으로 간주. 나머지가 없으면 점프로 간주.
+        while (n != 0) {
+            if (n % 2 == 0) {
+                n = n / 2;
+            } else {
+                n--;
+                ans++;
+            }
+        }
+
+        return ans;
     }
 
 }
