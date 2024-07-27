@@ -12,7 +12,7 @@ public class Ex42885 {
         System.out.println(solution(new int[]{20, 60, 70, 80, 30}, 100)); // 3
     }
 
-    // 오답
+    // 오답 - 테스트케이스 일부 오답
     public static int solution(int[] people, int limit) {
         int answer = 0;
 

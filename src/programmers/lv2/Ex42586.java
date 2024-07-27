@@ -11,7 +11,7 @@ public class Ex42586 {
         System.out.println(Arrays.toString(solution2(new int[]{95, 90, 99, 99, 80, 99}, new int[]{1, 1, 1, 1, 1, 1}))); // [1, 3, 2]
     }
 
-    // 테스트케이스 일부 오답.
+    // 오답 - 테스트케이스 일부 오답
     public static int[] solution(int[] progresses, int[] speeds) {
         List<Integer> answer = new ArrayList<>();
         int[] days = new int[progresses.length];
@@ -44,7 +44,7 @@ public class Ex42586 {
         return Arrays.stream(answer.toArray()).flatMapToInt(x -> IntStream.of((int) x)).toArray();
     }
 
-    // Ebook 해설
+    // 정답 - Ebook 해설
     public static int[] solution2(int[] progresses, int[] speeds) {
         Queue<Integer> answer = new ArrayDeque<>();
 

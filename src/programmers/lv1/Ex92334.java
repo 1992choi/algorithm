@@ -10,7 +10,7 @@ public class Ex92334 {
         System.out.println(Arrays.toString(solution2(new String[]{"con", "ryan"}, new String[]{"ryan con", "ryan con", "ryan con", "ryan con"}, 3))); // [0,0]
     }
 
-    /** 시간초과 */
+    // 오답 - 시간초과
     public static int[] solution(String[] id_list, String[] report, int k) {
         // 중복 신고 제거
         String[] distinctReport = Arrays.stream(report).distinct().toArray(String[]::new);
@@ -40,7 +40,7 @@ public class Ex92334 {
         return answer;
     }
 
-    /** 통과 */
+    // 정답
     public static int[] solution2(String[] id_list, String[] report, int k) {
         // 중복 신고 제거
         String[] distinctReport = Arrays.stream(report).distinct().toArray(String[]::new);

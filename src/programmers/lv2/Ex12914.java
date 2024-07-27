@@ -9,7 +9,7 @@ public class Ex12914 {
         System.out.println(solution2(1)); // 1
     }
 
-    // 부분통과 - 특정 케이스부터 시간 초과 발생
+    // 오답 - 특정 케이스부터 시간 초과 발생
     static long answer = 0;
 
     public static long solution(int n) {
@@ -34,7 +34,7 @@ public class Ex12914 {
         }
     }
 
-    // 풀이방법 참고한 로직.
+    // 정답 - 풀이방법 참고한 로직
     public static long solution2(int n) {
         /*
             n의 경우의 수:

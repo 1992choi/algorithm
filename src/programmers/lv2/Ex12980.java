@@ -14,7 +14,7 @@ public class Ex12980 {
         System.out.println(solution2(5000)); // 5
     }
 
-    // 정확성 테스트 모두 통과 && 효율성 통과 못함
+    // 오답 - 정확성 테스트 모두 통과 && 효율성 통과 못함
     public static int solution(int n) {
         memoization = new int[n + 1];
         Arrays.fill(memoization, Integer.MAX_VALUE);
@@ -57,7 +57,7 @@ public class Ex12980 {
         }
     }
 
-    // 풀이법 참고
+    // 정답 - 풀이법 참고
     public static int solution2(int n) {
         int ans = 0;
 
