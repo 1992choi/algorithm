@@ -1,9 +1,9 @@
-package fastcampus.codingpackage.part1;
+package fastcampus.codingpackage.part1.ch03;
 
 import java.util.Scanner;
 
 // https://www.acmicpc.net/problem/1236
-public class Ex007 {
+public class Ex1236 {
 
     public static void main(String[] args) {
         // 입력값 셋팅

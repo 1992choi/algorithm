@@ -1,10 +1,10 @@
-package fastcampus.codingpackage.part1;
+package fastcampus.codingpackage.part1.ch01;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
 // https://www.acmicpc.net/problem/1157
-public class Ex003 {
+public class Ex1157 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

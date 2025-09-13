@@ -1,4 +1,4 @@
-package fastcampus.codingpackage.part1;
+package fastcampus.codingpackage.part1.ch01;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -6,7 +6,7 @@ import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
 
 // https://www.acmicpc.net/problem/13223
-public class Ex005 {
+public class Ex13223 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

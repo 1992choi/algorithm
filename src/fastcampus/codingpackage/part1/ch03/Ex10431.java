@@ -1,11 +1,11 @@
-package fastcampus.codingpackage.part1;
+package fastcampus.codingpackage.part1.ch03;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 // https://www.acmicpc.net/problem/10431
-public class Ex008 {
+public class Ex10431 {
 
     public static void main(String[] args) {
         // 입력값 셋팅

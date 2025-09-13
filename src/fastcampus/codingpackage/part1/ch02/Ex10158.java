@@ -1,7 +1,7 @@
-package fastcampus.codingpackage.part1;
+package fastcampus.codingpackage.part1.ch02;
 
 // https://www.acmicpc.net/problem/10158
-public class Ex006 {
+public class Ex10158 {
 
     public static void main(String[] args) {
 
