@@ -1,5 +1,18 @@
-# 목차
+### 제출방법
+- 제출 포맷
+    - ```
+      // import 문
+      
+      public class Main {
+          
+          public static void main(String[] args) throws IOException {
+              // 풀이
+          }
+      
+      }
+      ```
 
+### 목차
 - Part 1. 자료구조&알고리즘 #1
     - Ch 01. 문자열
         - [2744 대소문자 바꾸기](https://www.acmicpc.net/problem/2744)
