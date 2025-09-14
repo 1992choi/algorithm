@@ -1,3 +1,8 @@
+### 알고리즘 강의
+- 강의명
+  - 패스트캠퍼스 > 핵심유형 20개로 한 번에 끝내는 알고리즘 코딩테스트 with Java 초격차 패키지 Online.
+- 깃허브
+  - https://github.com/orgs/20-with-Java/repositories
 ### 제출방법
 - 제출 포맷
     - ```
