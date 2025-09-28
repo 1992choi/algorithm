@@ -43,3 +43,41 @@ public class Ex10814 {
     }
 
 }
+
+/*
+    풀이
+      - 객체를 정렬하면 Tim sort가 사용되는데, Tim sort는 안정 정렬(stable sort) 특징을 가지고 있다.
+        안정 정렬(stable sort)이란 정렬 기준 키가 같은 원소들은 입력 순서를 보장한다는 뜻이다.
+        따라서 입력된 순서를 별도의 index와 같은 값을 사용하지 않아도 입력 순서가 보장되기 때문에 age로만 비교를 해도 답을 구할 수 있다.
+
+    class Member implements Comparable<Member> {
+        int age;
+        String name;
+
+        public Member(int age, String name) {
+            this.age = age;
+            this.name = name;
+        }
+
+        @Override
+        public int compareTo(Member o) {
+            return this.age - o.age;
+        }
+    }
+
+    class Main {
+        public static void main (String[] args) {
+            Scanner sc = new Scanner(System.in);
+
+            int N = sc.nextInt();
+            Member[] members = new Member[N];
+            for (int i = 0; i < N; i++)
+                members[i] = new Member(sc.nextInt(), sc.next(), i);
+
+            Arrays.sort(members);
+
+            for (Member member : members)
+                System.out.println(member.age + " " + member.name);
+        }
+    }
+ */
