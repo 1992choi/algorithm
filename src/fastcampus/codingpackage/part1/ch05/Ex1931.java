@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Ex1931 {
 
     public static void main(String[] args) {
-        // 강의 먼저 듣고 푼 문제. (백준 사이트 오류로 채점 아직 안해봄)
+        // 강의 먼저 듣고 푼 문제
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
