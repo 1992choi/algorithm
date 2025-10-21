@@ -50,3 +50,37 @@ public class Ex2805 {
         br.close();
     }
 }
+
+/*
+    풀이
+
+    static boolean isPossible(int[] heights, int cutHeight, int thresholdHeight) {
+        long sum = 0;
+        for (int h : heights)
+            if (h > cutHeight) sum += h - cutHeight;
+        return sum >= thresholdHeight;
+    }
+
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();
+        int M = sc.nextInt();
+        int[] h = new int[N];
+        for (int i = 0; i < N; i++)
+            h[i] = sc.nextInt();
+
+        int l = 0, r = 1000000000, ans = -1; // l과 r은 문제에 있는 답의 범위 중 가장 낮은 값과 높은 값으로 설정
+        while (l <= r) {
+            int m = (l + r) / 2;
+
+            if (isPossible(h, m, M)) { // 원하는만큼 나무를 가져갈 수 있다면 높이를 높인다.
+                ans = m;
+                l = m + 1;
+            } else { // 원하는만큼 가져갈 수 없다면 높이를 낮춰준다.
+                r = m - 1;
+            }
+        }
+        System.out.println(ans);
+    }
+ */
