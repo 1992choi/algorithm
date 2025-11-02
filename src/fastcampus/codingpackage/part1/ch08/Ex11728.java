@@ -27,6 +27,7 @@ public class Ex11728 {
             arrB[i] = Integer.parseInt(st.nextToken());
         }
 
+        /* 오답부분 : 입력값들이 이미 정렬된 순서로 들어오기 때문에 정렬을 할 필요가 없음 */
         Arrays.sort(arrA);
         Arrays.sort(arrB);
 
@@ -60,6 +61,7 @@ public class Ex11728 {
 
 /*
     풀이
+    - 두 배열을 모두 합친 후 정렬을 해도되지만, 각 배열이 정렬되어있다는 특징을 사용하여 투 포인터를 활용하여 풀 수 있다.
 
     public static void main (String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
