@@ -106,6 +106,7 @@
     - Ch 05. 재귀 #3
         - [1182 부분수열의 합](https://www.acmicpc.net/problem/1182)
         - [6603 로또](https://www.acmicpc.net/problem/6603)
+          - 실제 강의에서 푼 문제는 2758번 문제
         - [1208 부분수열의 합 2](https://www.acmicpc.net/problem/1208)
         - [10971 외판원 순회 2](https://www.acmicpc.net/problem/10971)
         - [14888 연산자 끼워넣기](https://www.acmicpc.net/problem/14888)
