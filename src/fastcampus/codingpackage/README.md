@@ -129,7 +129,7 @@
 
 - Part 3. 자료구조&알고리즘 #3
     - Ch 01. 그래프 탐색 - BFS, DFS
-        - [1280 DFS와 BFS](https://www.acmicpc.net/problem/1280)
+        - [1260 DFS와 BFS](https://www.acmicpc.net/problem/1260)
         - [11724 연결 요소의 개수](https://www.acmicpc.net/problem/11724)
         - [2606 바이러스](https://www.acmicpc.net/problem/2606)
         - [2573 빙산](https://www.acmicpc.net/problem/2573)
