@@ -133,7 +133,7 @@
         - [11724 연결 요소의 개수](https://www.acmicpc.net/problem/11724)
         - [2606 바이러스](https://www.acmicpc.net/problem/2606)
         - [2573 빙산](https://www.acmicpc.net/problem/2573)
-        - [1947 소문난 칠공주](https://www.acmicpc.net/problem/1947)
+        - [1941 소문난 칠공주](https://www.acmicpc.net/problem/1941)
     - Ch 02. BFS - 넓이 우선 탐색
         - [2178 미로 탐색](https://www.acmicpc.net/problem/2178)
         - [1697 숨바꼭질](https://www.acmicpc.net/problem/1697)
