@@ -203,3 +203,9 @@
         - [1525 퍼즐](https://www.acmicpc.net/problem/1525)
         - [16939 2×2×2 큐브](https://www.acmicpc.net/problem/16939)
         - [14599 인공지능 테트리스 (Large)](https://www.acmicpc.net/problem/14599)  
+
+---
+
+- 특이사항
+  - 재수강 필요
+    - [2854 문제 출제](https://www.acmicpc.net/problem/2854)
