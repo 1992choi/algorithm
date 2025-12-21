@@ -209,3 +209,6 @@
 - 특이사항
   - 재수강 필요
     - [2854 문제 출제](https://www.acmicpc.net/problem/2854)
+  - Next
+    - 각 파트의 연습문제 풀이
+    - Part 5 수강
