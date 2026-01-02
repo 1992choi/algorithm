@@ -207,6 +207,7 @@
 ---
 
 - 특이사항
+  - `Ch 05. 분석과 구현`은 SKIP
   - 재수강 필요
     - [2854 문제 출제](https://www.acmicpc.net/problem/2854)
   - Next
