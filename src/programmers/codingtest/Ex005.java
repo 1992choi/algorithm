@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-// 모의고사 - https://school.programmers.co.kr/learn/courses/30/lessons/12949
+// 행렬의 곱셈 - https://school.programmers.co.kr/learn/courses/30/lessons/12949
 public class Ex005 {
 
     public static void main(String[] args) {

@@ -2,7 +2,7 @@ package programmers.codingtest;
 
 import java.util.Arrays;
 
-// 모의고사 - https://school.programmers.co.kr/learn/courses/30/lessons/42889
+// 실패율 - https://school.programmers.co.kr/learn/courses/30/lessons/42889
 public class Ex006 {
 
     public static void main(String[] args) {
