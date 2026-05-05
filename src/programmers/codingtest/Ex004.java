@@ -48,17 +48,16 @@ public class Ex004 {
 
 /*
 public static int[] solution(int[] answers) {
-    // ① 수포자들의 패턴
+    // ❶ 수포자들의 패턴
     int[][] pattern = {
-        {1, 2, 3, 4, 5},
-        {2, 1, 2, 3, 2, 4, 2, 5},
-        {3, 3, 1, 1, 2, 2, 4, 4, 5, 5}
+            {1, 2, 3, 4, 5},
+            {2, 1, 2, 3, 2, 4, 2, 5},
+            {3, 3, 1, 1, 2, 2, 4, 4, 5, 5}
     };
-
-    // ② 점수 배열
+    // ❷ 수포자들의 점수를 저장할 배열
     int[] scores = new int[3];
 
-    // ③ 채점
+    // ❸ 각 수포자의 패턴과 정답이 얼마나 일치하는지 확인
     for (int i = 0; i < answers.length; i++) {
         for (int j = 0; j < pattern.length; j++) {
             if (answers[i] == pattern[j][i % pattern[j].length]) {
@@ -66,19 +65,16 @@ public static int[] solution(int[] answers) {
             }
         }
     }
-
-    // ④ 최고 점수
+    // ❹ 가장 높은 점수 저장
     int maxScore = Arrays.stream(scores).max().getAsInt();
-
-    // ⑤ 결과 리스트
-    List<Integer> result = new ArrayList<>();
+    // ❺ 가장 높은 점수를 가진 수포자들의 번호를 찾아서 리스트에 담음
+    ArrayList<Integer> answer = new ArrayList<>();
     for (int i = 0; i < scores.length; i++) {
         if (scores[i] == maxScore) {
-            result.add(i + 1);
+            answer.add(i + 1);
         }
     }
 
-    // ⑥ 배열로 변환
-    return result.stream().mapToInt(Integer::intValue).toArray();
+    return answer.stream().mapToInt(Integer::intValue).toArray();
 }
  */
